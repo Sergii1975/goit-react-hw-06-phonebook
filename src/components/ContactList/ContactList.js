@@ -6,9 +6,9 @@ import PropTypes from 'prop-types';
 
 export const ContactList = () => {
   const contacts = useSelector(getContactsList);
-  const filter = useSelector(getContactsFilter);
+    const filterContacts = useSelector(getContactsFilter);
   const visibleContacts = [
-    ...contacts.filter(contact => contact.name.toLowerCase().includes(filter)),
+    ...contacts.filter(contact => contact.name.toLowerCase().includes(filterContacts)),
   ];
 
   return (
